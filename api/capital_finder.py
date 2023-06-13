@@ -15,14 +15,14 @@ class handler(BaseHTTPRequestHandler):
     my_dict = dict(query_list)
     
     # print(111,my_dict)
-    if 'cantry_name' in my_dict:
-      contry = my_dict.get('cantry_name')
+    if 'country' in my_dict:
+      contry = my_dict.get('country')
       url= 'https://restcountries.com/v3.1/name/'
       res = requests.get(url+contry)
       data = res.json()
       # print(222,data)
-    for cantry_name_data in data :
-      capital = cantry_name_data['capital'][0]
+    for country_data in data :
+      capital = country_data['capital'][0]
       message = f'the capital of {contry} is {capital}'
       
     # print(3333,list_of_dif)
