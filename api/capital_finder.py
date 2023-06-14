@@ -21,12 +21,22 @@ class handler(BaseHTTPRequestHandler):
       res = requests.get(url+contry)
       data = res.json()
       # print(222,data)
-    for country_data in data :
-      capital = country_data['capital'][0]
-      message = f'the capital of {contry} is {capital}'
-      
-    # print(3333,list_of_dif)
-
+      for country_data in data :
+        capital = country_data['capital'][0]
+        message = f'the capital of {contry} is {capital}'
+     
+     
+     
+    elif 'capital' in my_dict:
+      cpital = my_dict.get('capital')
+      url= 'https://restcountries.com/v3.1/capital/'
+      res = requests.get(url+cpital)
+      data2 = res.json()
+      print(222,data2)
+      for country_data2 in data2 :
+        capital = country_data2['name']["common"]
+        message = f'the capital of {cpital} is {capital}'
+     
 
 
 
