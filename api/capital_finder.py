@@ -35,7 +35,7 @@ class handler(BaseHTTPRequestHandler):
       print(222,data2)
       for country_data2 in data2 :
         capital = country_data2['name']["common"]
-        message = f'the capital of {cpital} is {capital}'
+        message = f' {cpital} is the capital of  {capital}'
      
 
 
